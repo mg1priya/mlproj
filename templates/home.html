@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit card default ?</title>
+</head>
+<body>
+    <div class="login">
+        <h1>Credit card</h1>
+   
+        <form action="{{ url_for('predictdata')}}" method="post">
+            <h1>
+                <legend>Credit card default</legend>
+            </h1>
+            <div class="mb-3">
+                <label class="form-label">ID</label>
+                <input class="form-control" type="number" name="ID" placeholder="Enter ID" required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Limit Balance</label>
+                <input class="form-control" type="number" name="LIMIT_BAL" placeholder="Enter Limit Balance" required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Sex</label>
+                <input class="form-control" type="number" name="SEX" placeholder="Enter Sex" required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Education</label>
+                <input class="form-control" type="number" name="EDUCATION" placeholder="Enter Education" required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Marriage</label>
+                <input class="form-control" type="number" name="MARRIAGE" placeholder="Enter Marriage" required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Age</label>
+                <input class="form-control" type="number" name="AGE" placeholder="Enter Age" required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Payment Status for Previous Month (PAY_0)</label>
+                <input class="form-control" type="number" name="PAY_0" placeholder="Enter Payment Status for Previous Month" required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Payment Status for second Previous Month (PAY_2)</label>
+                <input class="form-control" type="number" name="PAY_2" placeholder="Enter Payment Status for second Previous Month" required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Payment Status for Third Previous Month (PAY_3)</label>
+                <input class="form-control" type="number" name="PAY_3" placeholder="Enter Payment Status for Third Previous Month" required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Payment Status for Fourth Previous Month (PAY_4)</label>
+                <input class="form-control" type="number" name="PAY_4" placeholder="Enter Payment Status for Fourth Previous Month" required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Payment Status for Fifth Previous Month (PAY_5)</label>
+                <input class="form-control" type="number" name="PAY_5" placeholder="Enter Payment Status for Fifth Previous Month" required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Payment Status for Sixth Previous Month (PAY_6)</label>
+                <input class="form-control" type="number" name="PAY_6" placeholder="Enter Payment Status for Sixth Previous Month" required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Bill Amount for the First Previous Month (BILL_AMT1)</label>
+                <input class="form-control" type="number" name="BILL_AMT1" placeholder="Enter Bill Amount for the First Previous Month" required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Bill Amount for the Second Previous Month (BILL_AMT2)</label>
+                <input class="form-control" type="number" name="BILL_AMT2" placeholder="Enter Bill Amount for the Second Previous Month" required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Bill Amount for the Third Previous Month (BILL_AMT3)</label>
+                <input class="form-control" type="number" name="BILL_AMT3" placeholder="Enter Bill Amount for the Third Previous Month" required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Bill Amount for the Fourth Previous Month (BILL_AMT4)</label>
+                <input class="form-control" type="number" name="BILL_AMT4" placeholder="Enter Bill Amount for the Fourth Previous Month" required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Bill Amount for the Fifth Previous Month (BILL_AMT5)</label>
+                <input class="form-control" type="number" name="BILL_AMT5" placeholder="Enter Bill Amount for the Fifth Previous Month" required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Bill Amount for the Sixth Previous Month (BILL_AMT6)</label>
+                <input class="form-control" type="number" name="BILL_AMT6" placeholder="Enter Bill Amount for the Sixth Previous Month" required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Payment Amount for the First Previous Month (PAY_AMT1)</label>
+                <input class="form-control" type="number" name="PAY_AMT1" placeholder="Enter Payment Amount for the First Previous Month" required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Payment Amount for the Second Previous Month (PAY_AMT2)</label>
+                <input class="form-control" type="number" name="PAY_AMT2" placeholder="Enter Payment Amount for the Second Previous Month" required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Payment Amount for the Third Previous Month (PAY_AMT3)</label>
+                <input class="form-control" type="number" name="PAY_AMT3" placeholder="Enter Payment Amount for the Third Previous Month" required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Payment Amount for the Fourth Previous Month (PAY_AMT4)</label>
+                <input class="form-control" type="number" name="PAY_AMT4" placeholder="Enter Payment Amount for the Fourth Previous Month" required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Payment Amount for the Fifth Previous Month (PAY_AMT5)</label>
+                <input class="form-control" type="number" name="PAY_AMT5" placeholder="Enter Payment Amount for the Fifth Previous Month" required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Payment Amount for the Sixth Previous Month (PAY_AMT6)</label>
+                <input class="form-control" type="number" name="PAY_AMT6" placeholder="Enter Payment Amount for the Sixth Previous Month" required />
+            </div>
+
+            <div class="mb-3">
+                <input class="btn btn-primary" type="submit" value="Predict" required />
+            </div>
+        </form>
+        <h2>
+            The prediction is {{results}}
+        </h2>
+    </div>
+</body>
+</html>
