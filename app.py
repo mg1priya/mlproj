@@ -7,9 +7,6 @@ from src.pipeline.predict_pipeline import CustomData,PredictPipeline
 
 app=Flask(__name__)
 
-# app=application
-print("worls")
-
 @app.route('/index',methods = ['GET','POST'])
 def index():
     if request.method == 'GET':
@@ -21,7 +18,6 @@ def predictdata():
     if request.method=='GET':
         return render_template('home.html')
     else:
-        print("ffg")
         data=CustomData(
            ID=int(request.form.get('ID')),
         LIMIT_BAL=int(request.form.get('LIMIT_BAL')),
